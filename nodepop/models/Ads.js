@@ -8,7 +8,9 @@ const adSchema = mongoose.Schema({
        precio: Number,
        foto: String,
        tags: [String]
-    });
+    }
+    //, {collection:'ads'}
+    );
 
     adSchema.statics.lista = function(filtro, limit, skip, fields, sort) {
       const query = Ads.find(filtro);

@@ -7,8 +7,10 @@ const Ads = require ('../../models/Ads')
 router.get('/', async function(req, res, next) {
   try {
 
-    const name = req.query.name;
-    const age = req.query.age;
+    const nombre = req.query.nombre;
+    const venta = req.query.venta;
+    const precio = req.query.precio;
+    const tags = req.query.tags;
     const limit = parseInt(req.query.limit);
     const skip = parseInt(req.query.skip);
     const fields = req.query.fields;
@@ -19,12 +21,20 @@ router.get('/', async function(req, res, next) {
 
     const filtro = {};
 
-    if (name) {
-      filtro.name = name
+    if (nombre) {
+      filtro.nombre = nombre
     }
 
-    if (age) {
-      filtro.age = age
+    if (venta) {
+      filtro.venta = venta
+    }
+
+    if(precio){
+      filtro.precio = precio
+    }
+
+    if(tags){
+      filtro.tags = tags
     }
 
     const resultado = await Ads.lista(filtro, limit, skip, fields, sort);
@@ -64,7 +74,6 @@ router.post('/', async (req, res, next) => {
     const adCreado = await ad.save();
 
    
-// esperando hasta que se resuelva la promesa que devolvión multar()
     res.status(201).json({ result: adCreado });
 
   } catch (error) {
