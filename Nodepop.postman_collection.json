@@ -239,6 +239,26 @@
 				"description": "Is a get example with filter and sort,etc."
 			},
 			"response": []
+		},
+		{
+			"name": "localhost:3000/api/ads",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/tags",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tags"
+					]
+				},
+				"description": "Show all tags that are distinct"
+			},
+			"response": []
 		}
 	]
 }
