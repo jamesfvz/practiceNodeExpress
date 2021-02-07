@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "ae159712-a53e-40aa-98ec-e15f9dc442d0",
+		"name": "Nodepop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "Show el ejs"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/ads",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "Show all ads"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/ads/601e8b4058980109745d0c2a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "lucas",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "vida",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "muerte",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/ads/601e8b4058980109745d0c2a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads",
+						"601e8b4058980109745d0c2a"
+					]
+				},
+				"description": "Show ad by id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/ads/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "casa",
+							"type": "text"
+						},
+						{
+							"key": "venta",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "450.000",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "vida",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "vivenda",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/ads",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads"
+					]
+				},
+				"description": "use of post method "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/ads/601f2766a6e8a2148f45b1dd",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "foto",
+							"value": "fotoCasa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/ads/601f2766a6e8a2148f45b1dd?",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads",
+						"601f2766a6e8a2148f45b1dd"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				},
+				"description": "Put a propertie by id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/ads/601f24dba6e8a2148f45b1db",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/ads/601f24dba6e8a2148f45b1db",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads",
+						"601f24dba6e8a2148f45b1db"
+					],
+					"query": [
+						{
+							"key": "foto",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "Delete by id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/?start=1&limit=3&sort=name&tag=lifestyle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/?start=1&limit=3&sort=name&tag=lifestyle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "sort",
+							"value": "name"
+						},
+						{
+							"key": "tag",
+							"value": "lifestyle"
+						}
+					]
+				},
+				"description": "Is a get example with filter and sort,etc."
+			},
+			"response": []
+		}
+	]
+}

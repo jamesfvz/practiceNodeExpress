@@ -9,15 +9,12 @@ router.get('/', async function(req, res, next) {
 
     const nombre = req.query.nombre;
     const venta = req.query.venta;
-    const precio = req.query.precio;
-    const tags = req.query.tags;
+    const precio = parseFloat(req.query.precio);
+    const tags = req.query.tag;
     const limit = parseInt(req.query.limit);
     const skip = parseInt(req.query.skip);
     const fields = req.query.fields;
-    // http://localhost:3000/api/agentes?fields=age%20address%20-_id
     const sort = req.query.sort;
-    // http://localhost:3000/api/agentes?sort=age%20-name
-    // ordena por edad ascendente y por nombre descendente
 
     const filtro = {};
 
@@ -72,7 +69,6 @@ router.post('/', async (req, res, next) => {
     const ad = new Ads(adData);
 
     const adCreado = await ad.save();
-
    
     res.status(201).json({ result: adCreado });
 
@@ -92,7 +88,6 @@ router.put('/:id', async (req, res, next) => {
       new: true,
       useFindAndModify: false
     });
-    // usamos { new: true } para que nos devuelva el agente actualizado
 
     if (!adActualizado) {
       res.status(404).json({ error: 'not found' });

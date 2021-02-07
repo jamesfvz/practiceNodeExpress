@@ -7,15 +7,13 @@
   <body>
     <h1><%= title %></h1>
 
-    <h2> LISTADO DE ANUNCIOS
-    </h2><br>
+    <h2> LISTA DE ANUNCIOS</h2><br>
     
-
-
       <% for(let advertise of resultSet){%>
         
-      
-        </p><b>Modelo: </b> <%= advertise.nombre %> </p> <b>Precio:</b> <%= advertise.precio %> EUROS 
+        <p> <img src="/images/<%=advertise.foto%>" alt="">  <p></p>
+        </p><b>Modelo: </b> <%= advertise.nombre %> </p> 
+        <b>Precio:</b> <%= advertise.precio %> €
         <p></p> <b>Tags:</b> <%= advertise.tags %>  </p>
         <p></p> <b>En venta:</b> <%= advertise.venta %>  </p>
         
