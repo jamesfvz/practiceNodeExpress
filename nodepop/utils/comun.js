@@ -36,7 +36,6 @@ module.exports= {
       }
   
       const resultado = await Ads.lista(filtro, limit, skip, fields, sort);
-      console.log(resultado)
       return resultado;
     } catch (err) {
       next(err);

@@ -9,7 +9,6 @@ router.get('/', async function(req, res, next) {
   try {
     
     const resultado = await comun.getAds(req,res,next)
-    console.log("el resultado en ads es", resultado)
     res.json(resultado);
   
   } catch (err) {
